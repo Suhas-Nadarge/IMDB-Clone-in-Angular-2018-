@@ -1,0 +1,47 @@
+<br>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- <button (click)="toggle()" class="btn btn-primary" id="bt">
+    {{buttonName}}
+</button> -->
+
+
+<div class="dis">
+    <ng-container *ngIf="show">
+        <ul>
+            <li *ngFor="let movie of movies">
+                <h5 class="text-primary">Title: {{movie.title}}</h5>
+                <p style="font-family:helvetica">Language: {{movie.language}}</p>
+                <p style="font-family:helvetica">Year : {{movie.year}}</p>
+
+                <p class="text-dark" style="font-family:helvetica">Discription: {{movie.discription}}</p>
+                <p style="display:inline" style="font-family:helvetica">Rating : {{movie.rating}}/10
+                      <p *ngFor="let dummy of ' '.repeat(movie.rating).split(''), let x = index" style="display:inline">
+                        <span class="fa fa-star checked"></span>
+                        <p *ngFor="let dummy of ' '.repeat(10-movie.rating).split(''), let x = index" style="display:inline">
+                            <span class="fa fa-star" ></span>
+                    </p> 
+                    <p><br><button type="button" (click)="AddWatchlist(movie)" class="btn btn-success btn-sm">Add To Watchlist</button>
+                    <font color='green'>{{ms}}</font>
+                    </p>
+
+                        <br>
+                        <br>
+                        <br>
+            </li>
+        </ul>
+
+<hr>
+<!-- <ul class="nav nav-pills">
+  <li class="nav-item" *ngFor="let p of pages; let i=index">
+      <a class="nav-link " href="" (click)="setPage(i,$event)" [ngClass]="{'active':i==page}">{{i}}</a>
+  </li>
+</ul> -->
+  <!-- <li class="nav-items">
+      <a class="nav-link" href="#">Link</a>
+  </li>
+  
+  <li class="nav-items">
+        <a class="nav-link disabled" href="#">Disabled Link</a>
+    </li> -->
+        </ng-container>

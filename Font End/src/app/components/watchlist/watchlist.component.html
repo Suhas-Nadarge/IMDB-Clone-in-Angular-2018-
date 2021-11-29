@@ -1,0 +1,36 @@
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+
+
+
+<div class="card" style="width: 70rem;" *ngIf=movies>
+    <div class="card-body">
+        <h3 class="card-title">Watchlist</h3>
+        <ng-container>
+            <br>
+            <ul>
+                <li *ngFor="let movie of movies">
+                    <h5 class="text-primary">Title: {{movie.title}}</h5>
+                    <p style="font-family:helvetica">Language: {{movie.language}}</p>
+                    <p style="font-family:helvetica">Year : {{movie.year}}</p>
+
+                    <p class="text-dark" style="font-family:helvetica">Discription: {{movie.discription}}</p>
+                    <p style="display:inline" style="font-family:helvetica">Rating : {{movie.rating}}/10
+                        <p *ngFor="let dummy of ' '.repeat(movie.rating).split(''), let x = index" style="display:inline">
+                            <span class="fa fa-star checked"></span>
+                            <p *ngFor="let dummy of ' '.repeat(10-movie.rating).split(''), let x = index" style="display:inline">
+                                <span class="fa fa-star"></span>
+                            </p>
+                            <br>
+                            <br>
+                            <button (click)="Remove(movie.id)" class="btn btn-danger btn-sm">Remove</button>
+
+                           
+                           <br><br>
+                            <br>
+                </li>
+            </ul>
+        </ng-container>    
+    </div>
+</div>

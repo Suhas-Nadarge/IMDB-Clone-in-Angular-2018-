@@ -1,0 +1,70 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<div class="form" style="width:80rem;">
+<div class="browse">
+  <h4 class="ui form">Browse Movies</h4>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f.value)" class="ui form">
+    <table class="table-active">
+      <tr>
+        <td>
+          <select class="form-control" name="rating" id="select1" ngModel>
+            <option value="" disabled selected>Select Rating</option>
+            <option value=10>10</option>
+            <option value=9>9</option>
+            <option value=8>8</option>
+            <option value=7>7</option>
+            <option value=6>6</option>
+            <option value=5>5</option>
+            <option value=4>4</option>
+            <option value=3>3</option>
+            <option value=2>2</option>
+            <option value=1>1</option>
+          </select>
+        </td>
+        <td>
+          <select class="form-control" name="language" id="select2" ngModel>
+            <option value="" disabled selected>Select Language</option>
+            <option *ngFor="let lan of langs" value={{lan}}>
+              {{lan}}
+            </option>
+          </select></td>
+        <td>
+          <button type="submit" class="btn btn-success" id="btn">Browse</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+</div>
+<div class="mvl">
+
+
+  <br>
+  <div>
+    <ng-container *ngIf="show" style="margin-left: 50%">
+      <app-movielist></app-movielist>
+    </ng-container>
+  </div>
+
+  <ul>
+    <li *ngFor="let movie of movies">
+      <h5 class="text-primary">Title: {{movie.title}}</h5>
+      <p style="font-family:helvetica">Language: {{movie.language}}</p>
+      <p style="font-family:helvetica">Year : {{movie.year}}</p>
+
+      <p class="text-dark" style="font-family:helvetica">Discription: {{movie.discription}}</p>
+      <p style="display:inline" style="font-family:helvetica">Rating : {{movie.rating}}/10
+        <p *ngFor="let dummy of ' '.repeat(movie.rating).split(''), let x = index" style="display:inline">
+          <span class="fa fa-star checked"></span>
+          <p *ngFor="let dummy of ' '.repeat(10-movie.rating).split(''), let x = index" style="display:inline">
+            <span class="fa fa-star "></span>
+          </p>
+          <br>
+          <br>
+          <button (click)="AddWatchlist(movie)" class="btn btn-success btn-sm">Add To Watchlist</button>
+          <br>
+          <br>
+          <br>
+    </li>
+  </ul>
+  
+</div>
+</div>

@@ -1,0 +1,29 @@
+
+
+
+<div class="ful">
+<div class="page"> <ul>
+                <li  routerLink="/home" class="l"></li>
+                <li routerLink="/home">Home</li>
+                <li  routerLink>About</li>
+                 <li routerLink="/createmovie"*ngIf="userservice.isAdminLoggedIn()">Add Movies</li>
+                <li routerLink="/browse" *ngIf="userservice.isLoggedIn()">Browse</li> -->
+                
+                <li routerLink="/movielist" *ngIf="userservice.isLoggedIn()">View Movies</li>
+                <li routerLink="/watchlist" *ngIf="userservice.isLoggedIn()">WatchList</li>
+
+                <li routerLink="/logout" *ngIf="userservice.isLoggedIn()">Logout</li>
+                <li routerLink="/loginuser" *ngIf="!userservice.isLoggedIn()">Log In</li>
+                <li routerLink="/registeruser" *ngIf="!userservice.isLoggedIn()">Register</li>
+                
+                
+
+            </ul> 
+    </div>    
+
+        
+
+</div>
+<div class="cont">
+<router-outlet></router-outlet>
+</div>

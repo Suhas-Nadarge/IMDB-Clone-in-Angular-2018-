@@ -1,0 +1,85 @@
+/* .container{
+height:657px; 
+background-size:cover; 
+background-position:50% 50%;
+background-image:url('http://www.rvscet.com/training-and-placement/wp-content/uploads/sites/10/2018/05/vintage-grey-background-10.jpg'); 
+} */
+
+
+
+ body{
+background-color: #111111;
+
+} 
+
+
+.page{
+width: 80%;
+margin: 0% auto;
+
+} 
+.con{
+    width: 80%;
+    
+    
+    } 
+.ful{
+    width: 100%;
+    margin: 0% auto;
+    background-color:black; 
+   
+     
+} 
+.twitter__bird {
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+  }
+
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+   
+}
+
+a{
+    text-decoration: none;
+    
+}
+
+li {
+    
+    float: left;
+}
+
+
+.l{
+   
+        background-image: url(https://upload.wikimedia.org/wikipedia/commons/6/69/IMDB_Logo_2016.svg);
+        background-size: 100%;
+        width: 156px;
+        background-size: 12;
+        padding: 37px;
+
+
+
+}
+
+li  {cursor: pointer;
+     background-repeat: no-repeat;
+    background-size: 61px 81px;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 26px;
+    font-size: 18px;
+    text-decoration:none;
+    font-family: Helvetica;
+}
+
+li :hover {
+    background-color: #111111;
+}
